@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio showcasing my projects, artwork, and research">
+    <meta name="author" content="Your Name">
+    <title>Home - My Portfolio</title>
+    <link rel="icon" href="assets/images/favicon.ico">
+    <style>
+        main {
+            border: 1px solid #ccc;
+        }
+        /* CSS for custom element - does not count towards limit */
+        profile-card {
+            display: block;
+            padding: 20px;
+            margin: 10px 0;
+            background-color: #f0f0f0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        profile-card p {
+            margin: 0;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="artwork.html">Artwork</a></li>
+                <li><a href="research.html">Research</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="experiments.html">Experiments</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>About Me</h2>
+            <p>Hi! I'm a passionate developer, artist, and researcher. This portfolio showcases my work across <strong>multiple disciplines</strong> and demonstrates my <em>commitment to excellence</em>.</p>
+            <p>Feel free to explore my <b>projects</b>, view my <i>artwork</i>, and learn about my research.</p>
+        </section>
+
+        <section>
+            <h3>Quick Links</h3>
+            <div>
+                <span>Check out my latest work:</span>
+                <ul>
+                    <li><a href="projects.html">View Projects</a></li>
+                    <li><a href="artwork.html">Browse Artwork</a></li>
+                    <li><a href="assets/pdf/cvUK.pdf">Download Resume (PDF)</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <article>
+            <h3>Latest Update</h3>
+            <p>I recently completed a major project called <strong>MAV</strong>. You can learn more about it on my <a href="projects.html">projects page</a>.</p>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 My Portfolio. All rights reserved. Made with &hearts; in San Diego.</p>
+    </footer>
+
+    <noscript>
+        <p>JavaScript is disabled in your browser. This site works fine without it!</p>
+    </noscript>
+
+    <!-- Custom Elements Demo -->
+    <div>
+        <h2>Custom Elements</h2>
+        <profile-card>
+            <p>This is a semantic custom element that can be styled with CSS.</p>
+        </profile-card>
+        <hello-world></hello-world>
+    </div>
+
+    <!-- Custom Element Definitions -->
+    <script>
+        // Semantic CSS Custom Element
+        class ProfileCard extends HTMLElement {
+            constructor() {
+                super();
+            }
+        }
+        customElements.define('profile-card', ProfileCard);
+
+        // Hello World Custom Element (logs to console)
+        class HelloWorld extends HTMLElement {
+            constructor() {
+                super();
+            }
+            
+            connectedCallback() {
+                console.log('Hello World!');
+            }
+        }
+        customElements.define('hello-world', HelloWorld);
+    </script>
+
+    <!-- Analytics placeholder -->
+    <script src="https://example.com/analytics.js" async></script>
+</body>
+</html>
+

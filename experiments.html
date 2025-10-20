@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiments - My Portfolio</title>
+    <link rel="icon" href="assets/images/favicon.ico">
+</head>
+<body>
+    <header>
+        <h1>HTML5 Experiments</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="artwork.html">Artwork</a></li>
+                <li><a href="research.html">Research</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="experiments.html">Experiments</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Template Element Demo</h2>
+            <p>The template below contains hidden content that can be used with JavaScript:</p>
+            <template id="demo-template">
+                <article>
+                    <h3>Template Content</h3>
+                    <p>This content is inside a template tag and won't render by default.</p>
+                    <p>Templates are useful for client-side content that will be instantiated later.</p>
+                </article>
+            </template>
+            <p>The template element above contains content that is parsed but not rendered.</p>
+        </section>
+
+        <section>
+            <h2>Picture Element Demo</h2>
+            <p>The picture element provides responsive image support:</p>
+            <picture>
+                <source srcset="assets/images/artwork-1.webp" type="image/webp">
+                <source srcset="assets/images/artwork-1.jpg" type="image/jpeg">
+                <img src="assets/images/artwork-1.jpg" alt="Responsive artwork demonstration" width="400">
+            </picture>
+        </section>
+
+        <section>
+            <h2>Audio Element Demo</h2>
+            <p>Audio element with multiple source formats for compatibility:</p>
+            <audio controls>
+                <source src="assets/audio/tutor-intro.mp3" type="audio/mpeg">
+                <source src="assets/audio/tutor-intro.ogg" type="audio/ogg">
+                Your browser does not support the audio element.
+            </audio>
+        </section>
+
+        <section>
+            <h2>Video Element Demo</h2>
+            <p>Video element with fallback sources:</p>
+            <video width="500" height="300" controls>
+                <source src="assets/videos/factify-demo.mp4" type="video/mp4">
+                <source src="assets/videos/factify-demo.webm" type="video/webm">
+                Your browser does not support the video tag.
+            </video>
+        </section>
+
+        <section>
+            <h2>Canvas Element Demo</h2>
+            <p>Canvas element for dynamic graphics rendering:</p>
+            <canvas id="myCanvas" width="400" height="250"></canvas>
+            <script>
+                const canvas = document.getElementById('myCanvas');
+                const ctx = canvas.getContext('2d');
+                
+                // Draw rectangle
+                ctx.fillStyle = '#FF6B6B';
+                ctx.fillRect(30, 30, 150, 100);
+                
+                // Draw circle
+                ctx.fillStyle = '#4ECDC4';
+                ctx.beginPath();
+                ctx.arc(280, 80, 60, 0, 2 * Math.PI);
+                ctx.fill();
+                
+                // Draw text
+                ctx.fillStyle = '#2C3E50';
+                ctx.font = '20px Arial';
+                ctx.fillText('Canvas Demo', 140, 200);
+            </script>
+        </section>
+    </main>
+
+    <section>
+        <h2>MathML: Einstein's Mass–Energy Equivalence</h2>
+        <p>Rendered with MathML:</p>
+        <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+            <mrow>
+                <mi>E</mi>
+                <mo>=</mo>
+                <mrow>
+                    <mi>m</mi>
+                    <msup>
+                        <mi>c</mi>
+                        <mn>2</mn>
+                    </msup>
+                </mrow>
+            </mrow>
+        </math>
+        <p>Why adoption lagged: for years, MathML lacked consistent cross browser support. Firefox supported MathML for a long time and Safari had partial support, but Chromium based browsers (Chrome/Edge) only added modern MathML Core support recently, so developers could not reliably depend on it without fallbacks or polyfills.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 My Portfolio. All rights reserved.</p>
+    </footer>
+</body>
+</html>

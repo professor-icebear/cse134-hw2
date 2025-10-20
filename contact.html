@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact me">
+    <title>Contact - My Portfolio</title>
+    <link rel="icon" href="assets/images/favicon.ico">
+    <style>
+        form {
+            border: 1px solid #999;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Contact Me</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="artwork.html">Artwork</a></li>
+                <li><a href="research.html">Research</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="experiments.html">Experiments</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Get in Touch</h2>
+            <p>I'd love to hear from you! Fill out the form below or reach out through social media.</p>
+        </section>
+
+        <section>
+            <h2>Contact Form</h2>
+            <form action="/submit-form" method="post">
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    
+                    <label for="name">Name:</label><br>
+                    <input type="text" id="name" name="name" required><br><br>
+                    
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="email" required><br><br>
+                    
+                    <label for="phone">Phone (optional):</label><br>
+                    <input type="tel" id="phone" name="phone"><br>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Message Details</legend>
+                    
+                    <label for="subject">Subject:</label><br>
+                    <input type="text" id="subject" name="subject"><br><br>
+                    
+                    <label for="message">Message:</label><br>
+                    <textarea id="message" name="message" rows="5" cols="40" placeholder="Type your message here..."></textarea><br><br>
+                    
+                    <label for="priority">Priority:</label><br>
+                    <input type="range" id="priority" name="priority" min="1" max="5"><br><br>
+                </fieldset>
+
+                <button type="submit">Send Message</button>
+                <button type="reset">Clear Form</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Other Ways to Connect</h2>
+            <ul>
+                <li>Email: contact@example.com</li>
+                <li>LinkedIn: linkedin.com/in/yourprofile</li>
+                <li>GitHub: github.com/yourusername</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Privacy Notice</h2>
+            <dialog id="privacy-dialog">
+                <h3>Privacy Information</h3>
+                <p>Your contact information will be kept private and secure.</p>
+                <p>We will not share your data with third parties.</p>
+            </dialog>
+            <p>Note: A dialog element is available above (hidden by default).</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 My Portfolio. All rights reserved. Made with &hearts; in San Diego.</p>
+    </footer>
+</body>
+</html>
+
